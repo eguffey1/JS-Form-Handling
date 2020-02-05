@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Survey - Erickson Guffey</title>
+        <link rel="stylesheet" type="text/css" href="css/styles.css">
+        <script src="js/process_form.js"></script>
+
+    </head>
+
+    <body>
+
+        <form name="validation" method="post" class="grid" onsubmit="return generateWelcome()">
+            <fieldset>
+            <legend>Personal Info</legend>
+            First name:<br>
+            <div id="z"><input type="text" name="firstname" style="width: 35%" onfocus="return provideHint1()" onblur="return validateFirst()" required><span id="a"></span></div><br>
+            Last name:<br>
+            <div id="y"><input type="text" name="lastname" style="width: 35%"  onfocus="return provideHint2()" onblur="return validateLast()" required><span id="b"></span></div><br>
+            E-Mail Address:<br>
+            <div id="x"><input type="email" name="email" style="width: 35%" onfocus="return provideHint3()" onblur="return validateEmail()" required><span id="c"></span></div><br>
+            Phone Number:<br>
+            <div id="w"><input type="text" name="phone" style="width: 35%"  onfocus="return provideHint4()" onblur="return validatePhone()" required><span id="d"></span></div><br>
+            Sulley Address:<br>
+            <div id="v"><input type="text" name="sulley" style="width: 35%"  onfocus="return provideHint5()" onblur="return validateSulley()" required><span id="e"></span></div><br>
+
+            <button type="submit" class="button myButton" name="formButton" style="width: 35%">Submit Form</button>
+        </fieldset>
+        </form>
+        <br/><br/>
+        <div id="validation">
+        </div>
+        <br/><br/>
+
+        <form name="survey" method="post" class="margin outline">
+
+            <h3 style="text-align: center" class="legend">Survey Questions - Which Video Game Character Are You?</h3>
+            <hr/>
+            <p>My favorite type of food is:</p><br>
+        <div id="survey1" class="legend" style="text-align: left; font-size: .9em">
+            <input type="radio" name="q1" value="American">American<br>
+            <input type="radio" name="q1" value="Italian">Italian<br>
+            <input type="radio" name="q1" value="Chinese">Chinese<br>
+            <input type="radio" name="q1" value="Other">Other<br>
+        </div>
+
+            <br><p>My favorite leisure activity is:</p><br>
+        <div id="survey2" class="legend" style="text-align: left; font-size: .9em">
+            <input type="radio" name="q2" value="VideoGames">Video Games<br>
+            <input type="radio" name="q2" value="WatchingTV">Watching TV<br>
+            <input type="radio" name="q2" value="Outdoor">Outdoor Activities(includes sports)<br>
+            <input type="radio" name="q2" value="Other">Other<br>
+        </div>
+
+            <br><p>What I plan to do with my degree:</p><br>
+        <div id="survey3" class="legend" style="text-align: left; font-size: .9em">
+            <input type="radio" name="q3" value="SomethingElse">Something not related to web design<br>
+            <input type="radio" name="q3" value="FrontEnd">Front End Web Design<br>
+            <input type="radio" name="q3" value="Backend">Back End Wed Design<br>
+            <input type="radio" name="q3" value="Nothing">Nothing<br>
+        </div>
+
+        <br><button type="submit" class="button myButton2" name="surveyButton" onclick="return generateBadge()">Submit&nbsp;Survey</button>
+        </form>
+
+        <div id="badge" class="margin">
+        </div>
+        <hr/>
+        <footer style="text-align: center;">Created by: Erickson Guffey</footer>
+    </body>
+
+</html>
